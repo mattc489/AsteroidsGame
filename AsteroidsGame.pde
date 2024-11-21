@@ -40,11 +40,11 @@ public void keyPressed(){
  }
  //accelerate
  if(key =='w'){
-  bob.accelerate(.1); 
+  bob.accelerate(.5); 
  }
  //de-accelerate
  if(key == 's'){
-  bob.accelerate(-0.1); 
+  bob.accelerate(-0.5); 
  }
  //hyperspacec
   if(key =='h'){
