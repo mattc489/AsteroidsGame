@@ -19,12 +19,6 @@ public void draw()
   bob.move();
   bob.show();
   fill(255);
-  textSize(20);
-  text(("Direction:" + (int)bob.getPointDirection()),10,20);
-  text(("X:" + bob.getCenterX()),10,40);
-  text(("Y:" + bob.getCenterY()),10,60);
-  text(("Xspeed:" + (int)bob.getXspeed()),10,80);
-  text(("Yspeed:" + (int)bob.getYspeed()),10,100);
 }
 
 public void keyPressed(){
