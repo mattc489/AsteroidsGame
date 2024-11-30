@@ -28,19 +28,15 @@ public void draw()
 }
 
 public void keyPressed(){
-  //turn right
  if(key == 'd'){
    bob.turn(15);
  }
- //turn left
  if(key == 'a'){
   bob.turn(-15); 
  }
- //accelerate
  if(key =='w'){
   bob.accelerate(.5); 
  }
- //de-accelerate
  if(key == 's'){
   bob.accelerate(-0.5); 
  }
