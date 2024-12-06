@@ -1,11 +1,19 @@
 //your variable declarations here
+int health = 100;
 Spaceship bob = new Spaceship();
 Star [] galaxy = new Star[200];
+ArrayList <Asteroid> rock = new ArrayList <Asteroid>();
 public void setup() 
 {
   //your code here
   background(0);
   size(500,500);
+  
+  for(int i = 0; i < 10; i++){
+   Asteroid sue = new Asteroid();
+   rock.add(sue);
+  }
+  
   for(int i = 0; i < galaxy.length; i++)
   {
   galaxy[i] = new Star();
@@ -27,6 +35,18 @@ public void draw()
   text(("Y:" + bob.getCenterY()),10,60);
   text(("Xspeed:" + (int)bob.getXspeed()),10,80);
   text(("Yspeed:" + (int)bob.getYspeed()),10,100);
+  text(("Health:" + health), 10, 120);
+  
+  for(int i = 0; i < rock.size(); i++){
+   rock.get(i).move();
+   rock.get(i).show();
+   float d = dist(bob.getCenterX(), bob.getCenterY(), 
+   rock.get(i).getCenterX(), rock.get(i).getCenterY());
+   if(d<30){
+     rock.remove(i);
+     health -= 10;
+   }
+  }
 }
 
 public void keyPressed(){
@@ -55,4 +75,3 @@ public void keyPressed(){
    bob.setPointDirection((int)(Math.random()*360));
  }
 }
-
