@@ -44,6 +44,7 @@ public void draw()
    rock.get(i).getCenterX(), rock.get(i).getCenterY());
    if(d<30){
      rock.remove(i);
+     i--;
      health -= 10;
    }
   }
