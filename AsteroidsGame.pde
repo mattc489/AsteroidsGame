@@ -24,6 +24,12 @@ public void draw()
   bob.move();
   bob.show();
   fill(255);
+
+for(int i=0; i<boom.size();i++){
+boom.get(i).move();
+boom.get(i).show();
+float distance = distance(bob.getCenterX,bob.getCenterY),boom.get(i).getcenterX(),boom.get(i).getcenterY());
+i--;
 }
 
 public void keyPressed(){
