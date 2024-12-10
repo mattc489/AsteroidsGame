@@ -28,7 +28,7 @@ public void draw()
 for(int i=0; i<boom.size();i++){
 boom.get(i).move();
 boom.get(i).show();
-float distance = dist(bob.getCenterX,bob.getCenterY),boom.get(i).getcenterX(),boom.get(i).getcenterY());
+float distance = dist(bob.getCenterX,bob.getCenterY),boom.get(i).getCenterX(),boom.get(i).getCenterY());
 }
 }
 
