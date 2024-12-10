@@ -3,6 +3,7 @@ int health = 100;
 Spaceship bob = new Spaceship();
 Star [] galaxy = new Star[200];
 ArrayList <Asteroid> rock = new ArrayList <Asteroid>();
+ArrayList <Bullet> shots = new ArrayList <Bullet>();
 public void setup() 
 {
   //your code here
@@ -48,6 +49,13 @@ public void draw()
      health -= 10;
    }
   }
+  
+  for(int i = 0; i < shots.size(); i++){
+   shots.get(i).move();
+   shots.get(i).show();
+   //float d = dist(shots.get(i).getCenterX(), shots.get(i).getCenterY(), 
+   //rock.get(i).getCenterX(), rock.get(i).getCenterY());
+  }
 }
 
 public void keyPressed(){
@@ -74,5 +82,8 @@ public void keyPressed(){
    bob.setCenterX((int)(Math.random()*500));
    bob.setCenterY((int)(Math.random()*500));
    bob.setPointDirection((int)(Math.random()*360));
+ }
+ if(key == ' '){
+  shots.add(new Bullet(bob)); 
  }
 }
