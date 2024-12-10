@@ -30,6 +30,7 @@ boom.get(i).move();
 boom.get(i).show();
 float distance = distance(bob.getCenterX,bob.getCenterY),boom.get(i).getcenterX(),boom.get(i).getcenterY());
 }
+}
 
 public void keyPressed(){
  if(key == 'd'){
