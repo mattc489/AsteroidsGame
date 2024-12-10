@@ -1,9 +1,14 @@
 Spaceship bob = new Spaceship();
 Star [] galaxy = new Star[200];
+ArrayList<Asteroid> boom = new ArrayList<Asteroid>();
 public void setup() 
 {
   background(0);
   size(500,500);
+  for(int i=0; i<7;i++){
+Asteroid me = new Asteroid();
+  boom.add(me);
+}
   for(int i = 0; i < galaxy.length; i++)
   {
   galaxy[i] = new Star();
