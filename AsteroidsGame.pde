@@ -50,11 +50,16 @@ public void draw()
    }
   }
   
-  for(int i = 0; i < shots.size(); i++){
+  for(int i = shots.size()-1; i >= 0; i--){
    shots.get(i).move();
    shots.get(i).show();
-   //float d = dist(shots.get(i).getCenterX(), shots.get(i).getCenterY(), 
-   //rock.get(i).getCenterX(), rock.get(i).getCenterY());
+   for(int j = rock.size()-1; j >= 0; j--){
+     if(dist((float)(shots.get(i).myCenterX), (float)(shots.get(i).myCenterY), 
+     (float)(rock.get(j).myCenterX), (float)(rock.get(j).myCenterY)) <= 20){
+       shots.remove(i);
+       rock.remove(j);
+     }
+   }
   }
 }
 
