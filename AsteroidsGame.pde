@@ -29,6 +29,9 @@ for(int i=0; i<boom.size();i++){
 boom.get(i).move();
 boom.get(i).show();
 float distance = dist(bob.getCenterX,bob.getCenterY),boom.get(i).getCenterX(),boom.get(i).getCenterY());
+if(distance<30){
+boom.remove(i);
+i--;
 }
 }
 
