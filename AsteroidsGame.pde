@@ -58,6 +58,7 @@ public void draw()
      (float)(rock.get(j).myCenterX), (float)(rock.get(j).myCenterY)) <= 20){
        shots.remove(i);
        rock.remove(j);
+break;
      }
    }
   }
