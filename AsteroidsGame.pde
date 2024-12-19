@@ -1,4 +1,3 @@
-int hp=100;
 Spaceship bob = new Spaceship();
 Star[] galaxy = new Star[200];
 ArrayList<Asteroid> boom = new ArrayList<Asteroid>();
@@ -39,7 +38,6 @@ public void draw() {
     if (d < 30) {
       boom.remove(i);
       i--;  
-      hp=hp-10;
     }
   }
 for(int i = shoot.size()-1; i >= 0; i--){
