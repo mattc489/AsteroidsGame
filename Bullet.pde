@@ -6,7 +6,7 @@ public Bullet(Spaceship bob){
   accelerate(2);
 }
 public void show(){
-  fill(255,0,255);
+  fill(255,0,0);
   ellipse((float)myCenterX, (float)myCenterY, 10,10);
 }
   public void setCenterX(int x){myCenterX=x;}
